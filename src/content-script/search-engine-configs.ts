@@ -9,8 +9,6 @@ export interface SearchEngine {
 export const config: Record<string, SearchEngine> = {
   openai: {
     inputQuery: ['form #prompt-textarea'],
-    bodyQuery: ['h3'],
     sidebarContainerQuery: ['h3'],
-    appendContainerQuery: ['#gpt-answer'],
   },
 }

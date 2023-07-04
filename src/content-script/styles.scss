@@ -1,132 +1,18 @@
 @import 'light.scss';
 @import 'dark.scss';
 
-.chat-gpt-container {
-  margin-left: 20px;
-  margin-bottom: 30px;
-  flex-basis: 0;
-  flex-grow: 1;
-  z-index: 1;
-  //overflow: auto;
-  overflow:scroll;
-
-  .chat-gpt-card {
-    border: 1px solid;
-    border-radius: 8px;
-    padding: 15px;
-    line-height: 1.5;
-  }
-
-  &.sidebar-free {
-    margin-left: 30px;
-    height: fit-content;
-  }
-
-  p {
-    margin: 0;
-  }
-
-  a.gpt-promotion-link {
-    &:hover {
-      text-decoration: none;
-    }
-    a:visited {
-      color: inherit;
-    }
-  }
-
-  .icon-and-text {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  #gpt-answer.markdown-body.gpt-markdown {
-    font-size: 15px;
-    line-height: 1.6;
-
-    pre {
-      margin-top: 10px;
-    }
-
-    & > p:not(:last-child) {
-      margin-bottom: 10px;
-    }
-
-    pre code {
-      white-space: pre-wrap;
-      word-break: break-all;
-    }
-
-    pre code.hljs {
-      padding: 0;
-      background-color: transparent;
-    }
-
-    ol li {
-      list-style: disc;
-    }
-
-    img {
-      width: 100%;
-    }
-
-    a {
-      text-decoration: underline;
-      &:visited {
-        color: unset;
-      }
-    }
-  }
-
-  .gpt-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 10px;
-    gap: 5px;
-
-    .gpt-feedback {
-      margin-left: auto;
-      display: flex;
-      gap: 6px;
-      cursor: pointer;
-    }
-
-    .gpt-feedback-selected {
-      color: #ff6347;
-    }
-  }
+button#submit {
+  background-color: #000000;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0.5em;
+  font-size: 12px;
+  padding: 0.2em 0.4em;
+  margin: 0.1em 0.2em;
+  min-width: 60px;
 }
-
-form#requestion {
-  input#question {
-    border-radius: 10px;
-    border: 2px solid #8e8ea0;
-    margin: 0px 2px 0px 2px;
-    padding: 1rem;
-    width: 100%;
-    outline: 2px #1b8f76;
-  }
-
-  input#question:focus {
-    border: 2px solid #1b8f76;
-    outline: none;
-  }
-
-  button#submit {
-    background-color: #1b8f76; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 0px 2px 0px 2px;
-    cursor: pointer;
-    border-radius:10px;
-  }
-}
-
