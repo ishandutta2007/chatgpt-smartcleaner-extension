@@ -1,5 +1,5 @@
 {
-  "name": "bard-on-chatgpt-extension",
+  "name": "chatgpt-smartcleaner-extension",
   "author": "ishandutta2007",
   "scripts": {
     "build": "node build.mjs",

@@ -74,14 +74,14 @@ function OptionsPage(props: { theme: Theme; onThemeChange: (theme: Theme) => voi
         </div>
         <div className="flex flex-row gap-3">
           <a
-            href="https://github.com/ishandutta2007/bard-on-chatgpt-extension/issues"
+            href="https://github.com/ishandutta2007/chatgpt-smartcleaner-extension/issues"
             target="_blank"
             rel="noreferrer"
           >
             Feedback
           </a>
           <a
-            href="https://github.com/ishandutta2007/bard-on-chatgpt-extension"
+            href="https://github.com/ishandutta2007/chatgpt-smartcleaner-extension"
             target="_blank"
             rel="noreferrer"
           >
