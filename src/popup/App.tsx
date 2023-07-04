@@ -31,7 +31,7 @@ function App() {
     <div className="flex flex-col h-full">
       <div className="mb-2 flex flex-row items-center px-1">
         <img src={logo} className="w-5 h-5 rounded-sm" />
-        <p className="text-sm font-semibold m-0 ml-1">BARD chat for Google search</p>
+        <p className="text-sm font-semibold m-0 ml-1">Cleans ChatGPT chats in one click</p>
         <div className="grow"></div>
         <span className="cursor-pointer leading-[0]" onClick={openOptionsPage}>
           <GearIcon size={16} />
@@ -61,8 +61,8 @@ function App() {
           <div className="grow flex flex-col justify-center">
             <p className="text-base px-2 text-center">
               Please login and pass Cloudflare check at{' '}
-              <a href="https://bard.google.com/" target="_blank" rel="noreferrer">
-                bard.google.com
+              <a href="https://chat.openai.com/" target="_blank" rel="noreferrer">
+                chat.openai.com
               </a>
             </p>
           </div>

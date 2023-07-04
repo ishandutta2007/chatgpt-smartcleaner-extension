@@ -1,6 +1,5 @@
 import Browser from 'webextension-polyfill'
 import { getProviderConfigs, ProviderType } from '../config'
-import { BARDProvider, sendMessageFeedbackBard } from './providers/bard'
 import { ChatGPTProvider, getChatGPTAccessToken, sendMessageFeedback } from './providers/chatgpt'
 import { OpenAIProvider } from './providers/openai'
 import { Provider } from './types'
@@ -17,9 +16,7 @@ async function generateAnswers(
   const providerConfigs = await getProviderConfigs()
 
   let provider: Provider
-  if (providerConfigs.provider === ProviderType.BARD) {
-    provider = new BARDProvider()
-  } else if (providerConfigs.provider === ProviderType.ChatGPT) {
+  if (providerConfigs.provider === ProviderType.ChatGPT) {
     const token = await getChatGPTAccessToken()
     provider = new ChatGPTProvider(token)
   } else if (providerConfigs.provider === ProviderType.GPT3) {
@@ -45,11 +42,8 @@ async function generateAnswers(
       }
       port.postMessage(event.data)
     },
-    // conversationId: conversationId, //used for chatGPT
-    // parentMessageId: parentMessageId, //used for chatGPT
-    // conversationContext: conversationContext, //used for BARD
-    contextIds: contextIds, //used for BARD
-    requestParams: requestParams, //used for BARD
+    conversationId: conversationId, //used for chatGPT
+    parentMessageId: parentMessageId, //used for chatGPT
   })
 }
 
@@ -79,8 +73,6 @@ Browser.runtime.onMessage.addListener(async (message) => {
     if (providerConfigs.provider === ProviderType.ChatGPT) {
       const token = await getChatGPTAccessToken()
       await sendMessageFeedback(token, message.data)
-    } else {
-      await sendMessageFeedbackBard(message.data)
     }
   } else if (message.type === 'OPEN_OPTIONS_PAGE') {
     Browser.runtime.openOptionsPage()

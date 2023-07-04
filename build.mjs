@@ -22,12 +22,13 @@ async function runEsbuild() {
       'src/background/index.ts',
       'src/options/index.tsx',
       'src/popup/index.tsx',
+      'src/script.tsx',
     ],
     bundle: true,
     outdir: outdir,
     treeShaking: true,
-    minify: true,
-    drop: ['console', 'debugger'],
+    // minify: true,
+    // drop: ['console', 'debugger'],
     legalComments: 'none',
     define: {
       'process.env.NODE_ENV': '"production"',
@@ -73,6 +74,7 @@ async function build() {
   await runEsbuild()
 
   const commonFiles = [
+    { src: 'build/script.js', dst: 'script.js' },
     { src: 'build/content-script/index.js', dst: 'content-script.js' },
     { src: 'build/content-script/index.css', dst: 'content-script.css' },
     { src: 'build/background/index.js', dst: 'background.js' },

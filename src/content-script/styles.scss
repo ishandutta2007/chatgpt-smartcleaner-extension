@@ -1,6 +1,10 @@
 @import 'light.scss';
 @import 'dark.scss';
 
+span:nth-child(1) > div > div > h3 {
+  height: auto;
+}
+
 button#submit {
   background-color: #000000;
   border: none;
@@ -15,4 +19,7 @@ button#submit {
   padding: 0.2em 0.4em;
   margin: 0.1em 0.2em;
   min-width: 60px;
+}
+button#submit:hover {
+  background-color: #004;
 }

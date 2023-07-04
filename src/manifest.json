@@ -30,5 +30,9 @@
       "js": ["content-script.js"],
       "css": ["content-script.css"]
     }
-  ]
+  ],
+  "web_accessible_resources": [{
+    "resources": ["script.js"],
+    "matches": ["<all_urls>"]
+  }]
 }
