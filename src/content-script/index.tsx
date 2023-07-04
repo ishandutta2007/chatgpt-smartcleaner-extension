@@ -8,11 +8,11 @@ function check() {
     for (let i = 0; i < headerContainers.length; i++) {
       const button_element = document.createElement('button')
       button_element.id = 'submit'
-      button_element.textContent = '🗑️' + 'All'
+      button_element.textContent = '🗑️' + ' All'
       headerContainers[i].append(button_element)
       const button_element2 = document.createElement('button')
       button_element2.id = 'submit'
-      button_element2.textContent = '🗑️' + 'Last5'
+      button_element2.textContent = '🗑️' + ' Last-5'
       headerContainers[i].append(button_element2)
     }
     return true
